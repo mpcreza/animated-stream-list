@@ -113,7 +113,7 @@ class _AnimatedStreamListState<E> extends State<AnimatedStreamList<E>>
       itemBuilder:
           (BuildContext context, int index, Animation<double> animation) =>
               widget.itemBuilder(
-        _listController[index],
+        _listController.items,
         index,
         context,
         animation,

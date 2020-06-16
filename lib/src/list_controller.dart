@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 typedef Widget AnimatedStreamListItemBuilder<T>(
-  T item,
+  List<T> items,
   int index,
   BuildContext context,
   Animation<double> animation,
@@ -35,7 +35,7 @@ class ListController<E> {
     _list.removeItem(
       index,
       (BuildContext context, Animation<double> animation) =>
-          itemRemovedBuilder(item, index, context, animation),
+          itemRemovedBuilder(items, index, context, animation),
       duration: duration,
     );
   }

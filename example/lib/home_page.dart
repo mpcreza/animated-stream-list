@@ -60,12 +60,12 @@ class _HomePageState extends State<HomePage> {
   Widget _buildStreamList(Stream<List<Todo>> todoListStream) {
     return AnimatedStreamList<Todo>(
       streamList: todoListStream,
-      itemBuilder: (Todo todo, int index, BuildContext context,
+      itemBuilder: (List<Todo> items, int index, BuildContext context,
               Animation<double> animation) =>
-          _buildTile(todo, index, animation),
-      itemRemovedBuilder: (Todo todo, int index, BuildContext context,
+          _buildTile(items[index], index, animation),
+      itemRemovedBuilder: (List<Todo> items, int index, BuildContext context,
               Animation<double> animation) =>
-          _buildRemovedTile(todo, animation),
+          _buildRemovedTile(items[index], animation),
       equals: (todo1, todo2) => todo1.changedAt == todo2.changedAt,
     );
   }
