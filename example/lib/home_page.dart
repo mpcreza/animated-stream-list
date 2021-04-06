@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  TodoBloc _todoBloc;
+  late TodoBloc _todoBloc;
 
   @override
   void initState() {
@@ -86,11 +86,11 @@ class _HomePageState extends State<HomePage> {
             onChanged: (newValue) => _todoBloc.toggleDone(index),
           ),
           title: Text(
-            todo.title,
+            todo.title!,
             style: textStyle,
           ),
           subtitle: Text(
-            todo.content,
+            todo.content!,
             style: textStyle,
           ),
           trailing: IconButton(
@@ -118,11 +118,11 @@ class _HomePageState extends State<HomePage> {
             onChanged: null,
           ),
           title: Text(
-            todo.title,
+            todo.title!,
             style: textStyle,
           ),
           subtitle: Text(
-            todo.content,
+            todo.content!,
             style: textStyle,
           ),
           trailing: const Icon(Icons.delete),

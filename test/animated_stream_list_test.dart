@@ -13,7 +13,7 @@ main() {
     final controller = ListController<int>(
       items: list1,
       key: MockKey(),
-      itemRemovedBuilder: (int element, int index, BuildContext context,
+      itemRemovedBuilder: (List<int> element, int index, BuildContext context,
               Animation<double> animation) =>
           null, duration: const Duration(milliseconds: 300),
     );
@@ -31,7 +31,7 @@ main() {
     final controller = ListController<int>(
       items: list1,
       key: MockKey(),
-      itemRemovedBuilder: (int element, int index, BuildContext context,
+      itemRemovedBuilder: (List<int> element, int index, BuildContext context,
               Animation<double> animation) =>
           null, duration: const Duration(milliseconds: 300),
     );
@@ -49,7 +49,7 @@ main() {
     final controller = ListController<int>(
       items: list1,
       key: MockKey(),
-      itemRemovedBuilder: (int element, int index, BuildContext context,
+      itemRemovedBuilder: (List<int> element, int index, BuildContext context,
                            Animation<double> animation) =>
       null, duration: const Duration(milliseconds: 300),
     );
@@ -67,7 +67,7 @@ main() {
     final controller = ListController<int>(
       items: list1,
       key: MockKey(),
-      itemRemovedBuilder: (int element, int index, BuildContext context,
+      itemRemovedBuilder: (List<int> element, int index, BuildContext context,
                            Animation<double> animation) =>
       null, duration: const Duration(milliseconds: 300),
     );
@@ -81,11 +81,11 @@ main() {
 
   test("check if throws when second list is null", () async {
     final list1 = [1];
-    final list2 = null;
+    final dynamic list2 = null;
     final controller = ListController<int>(
       items: list1,
       key: MockKey(),
-      itemRemovedBuilder: (int element, int index, BuildContext context,
+      itemRemovedBuilder: (List<int> element, int index, BuildContext context,
               Animation<double> animation) =>
           null, duration: const Duration(milliseconds: 300),
     );
@@ -101,7 +101,7 @@ main() {
       final controller = ListController<int>(
         items: list1,
         key: MockKey(),
-        itemRemovedBuilder: (int element, int index, BuildContext context,
+        itemRemovedBuilder: (List<int> element, int index, BuildContext context,
                              Animation<double> animation) =>
         null, duration: const Duration(milliseconds: 300),
       );
@@ -119,7 +119,7 @@ main() {
       final controller = ListController<int>(
         items: list1,
         key: MockKey(),
-        itemRemovedBuilder: (int element, int index, BuildContext context,
+        itemRemovedBuilder: (List<int> element, int index, BuildContext context,
                              Animation<double> animation) =>
         null, duration: const Duration(milliseconds: 300),
       );

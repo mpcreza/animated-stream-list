@@ -1,6 +1,6 @@
 class Todo implements Comparable<Todo> {
-  final String title;
-  final String content;
+  final String? title;
+  final String? content;
   DateTime _changedAt;
   bool _done;
 
